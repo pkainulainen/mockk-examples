@@ -1,3 +1,4 @@
+import org.gradle.kotlin.dsl.testRuntimeOnly
 import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 
 plugins {
@@ -22,7 +23,9 @@ repositories {
 
 dependencies {
     testImplementation("io.mockk:mockk:1.14.9")
+    testImplementation("org.assertj:assertj-core:3.27.7")
     testImplementation("org.junit.jupiter:junit-jupiter:6.0.2")
+    testRuntimeOnly("org.junit.platform:junit-platform-launcher:6.0.2")
 }
 
 tasks.test {
