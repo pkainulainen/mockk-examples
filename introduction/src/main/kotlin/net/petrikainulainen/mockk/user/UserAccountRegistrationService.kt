@@ -5,7 +5,8 @@ package net.petrikainulainen.mockk.user
  */
 class UserAccountRegistrationService(
     private val repository: UserRepository,
-    private val emailService: EmailService) {
+    private val emailService: EmailService
+) {
 
     /**
      * Registers a new user account.
